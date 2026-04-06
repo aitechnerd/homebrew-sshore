@@ -3,38 +3,38 @@
 # See .github/workflows/release.yml (publish-homebrew job).
 #
 # Placeholder names (replaced by sed in CI):
-#   0.2.0                  → e.g. 0.2.0
-#   7c1ba7ccd1fcb83b0c471089fb18635bdf3caedfd8d937c34efed97128e09c88       → sha256 for aarch64-apple-darwin
-#   6e52553f7bd4e1c129e078c63771dc565892e465e53ba4cee94ccf4310c04d53      → sha256 for x86_64-apple-darwin
-#   e86c4bfbea8e973c389ee9e6805e42e05d3a283ebf433adb26bcd92989198b26       → sha256 for aarch64-unknown-linux-gnu
-#   be92c60405cf4b7110c9dd451aa96534c537c32195f2c81c01801bbfe3e6759c      → sha256 for x86_64-unknown-linux-gnu
+#   0.2.1                  → e.g. 0.2.0
+#   60fc1e9f43c870b09f2c6a4663e693bf571d6272ce8c2250216e14ac1683f51a       → sha256 for aarch64-apple-darwin
+#   4d241b70822ee887b9fa05886fafe2a4ec6bb45c8be871b12722ba7687234807      → sha256 for x86_64-apple-darwin
+#   4412c218d6b9fc340b8e555dd987722f3e75a2296d55d0176e3cb686e821fb47       → sha256 for aarch64-unknown-linux-gnu
+#   75d34049cd1207118d533a1fe2de17c07d0f9bd28546527cf2fa1f14b7d20306      → sha256 for x86_64-unknown-linux-gnu
 class Sshore < Formula
   desc "Terminal-native SSH connection manager with environment-aware safety"
   homepage "https://github.com/aitechnerd/sshore"
   license "MIT"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     on_arm do
       url "https://github.com/aitechnerd/sshore/releases/download/v#{version}/sshore-aarch64-apple-darwin.tar.gz"
-      sha256 "7c1ba7ccd1fcb83b0c471089fb18635bdf3caedfd8d937c34efed97128e09c88"
+      sha256 "60fc1e9f43c870b09f2c6a4663e693bf571d6272ce8c2250216e14ac1683f51a"
     end
 
     on_intel do
       url "https://github.com/aitechnerd/sshore/releases/download/v#{version}/sshore-x86_64-apple-darwin.tar.gz"
-      sha256 "6e52553f7bd4e1c129e078c63771dc565892e465e53ba4cee94ccf4310c04d53"
+      sha256 "4d241b70822ee887b9fa05886fafe2a4ec6bb45c8be871b12722ba7687234807"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/aitechnerd/sshore/releases/download/v#{version}/sshore-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e86c4bfbea8e973c389ee9e6805e42e05d3a283ebf433adb26bcd92989198b26"
+      sha256 "4412c218d6b9fc340b8e555dd987722f3e75a2296d55d0176e3cb686e821fb47"
     end
 
     on_intel do
       url "https://github.com/aitechnerd/sshore/releases/download/v#{version}/sshore-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "be92c60405cf4b7110c9dd451aa96534c537c32195f2c81c01801bbfe3e6759c"
+      sha256 "75d34049cd1207118d533a1fe2de17c07d0f9bd28546527cf2fa1f14b7d20306"
     end
   end
 
